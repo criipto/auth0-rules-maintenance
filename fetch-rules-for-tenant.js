@@ -17,5 +17,9 @@ getAccessToken(auth0TenantDns, clientID, clientSecret).then(function(tenantToken
         let rawRulesFile = createRawRulesFileName(__dirname, auth0TenantDns);
         let prettyRawRules = JSON.stringify(rules, null, 2);
         fs.writeFileSync(rawRulesFile, prettyRawRules);
+    }).catch(function(error) {
+        console.error(`Failed to get rules from the Auth0 tenant ${auth0TenantDns}`);
+        let data = ((error || {}).response || {}).data
+        console.error(data || error);
     });
 });
