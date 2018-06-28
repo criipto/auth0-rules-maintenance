@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^0.18.0",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^7.4.3",
+    "lodash": "^4.17.10",
+    "request": "^2.81.0",
+    "string.prototype.padstart": "^3.0.0"
+  }
+}
